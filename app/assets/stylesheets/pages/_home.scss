@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+li {
+  padding: 10px;
+  font-size: 32px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $orange;
+}
