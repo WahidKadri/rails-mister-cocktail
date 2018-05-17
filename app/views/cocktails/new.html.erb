@@ -1,0 +1,23 @@
+<h1 class="text-center">Add a new Cocktail</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <%= simple_form_for @cocktail do |f| %>
+        <% if @cocktail.errors.any? %>
+          <div class="errors-container">
+            <ul>
+              <% @cocktail.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <%= f.input :name %>
+        <%= f.submit class:"btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
