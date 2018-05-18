@@ -1,15 +1,28 @@
 <div class="banner">
   <div class="banner-content">
     <h1><i class="fas fa-glass-martini"></i> Mister Cocktails</h1>
-    <ul class="list-unstyled">
-        <% @cocktails.each do |cocktail| %>
-          <li>
-            <%= link_to cocktail.name, cocktail_path(cocktail) %>
-          </li>
-          <% end %>
-      </ul>
       <%= link_to new_cocktail_path do %>
       <span class="btn btn-primary"><i class="fas fa-plus"> Add a new cocktail</i></span>
       <% end %>
   </div>
 </div>
+
+
+
+<div class="container">
+  <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+          url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+            <h2> <%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
+
+
+
+
+
