@@ -6,4 +6,13 @@
     <li><%= dose.description %> de <%= dose.ingredient.name %></li>
     <% end %>
   </ul>
+
+  <%= link_to new_cocktail_dose_path(@cocktail) do %>
+  <span class="btn btn-success"><i class="fas fa-undo-alt"> Add an ingredient</i></span>
+  <% end %>
+
+  <%= link_to "/" do %>
+  <i class="fas fa-undo-alt"> Back to list</i>
+
+  <% end %>
 </div>
