@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
+# gem cloudinary
+gem 'cloudinary'
 # gem figaro
 gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
